@@ -934,9 +934,12 @@ clearInterval(timer);
 
 // --------------------------
 // Love Button
-// --------------------------
-
+// 
+    
 loveButton.onclick = () => {
+
+  const msg = encodeURIComponent("Hi baby 🥰 I just won " + chosenPrize.amount + "! Come give me my gift 💝");
+  const waURL = "https://wa.me/2348107062724?text=" + msg;
 
   overlay.innerHTML = `
 
@@ -964,25 +967,18 @@ loveButton.onclick = () => {
 
       <br><br>
 
-      <h2 style="color:#D2A23C;margin-bottom:30px;">
+      <a href="${waURL}" target="_blank"
+        style="display:inline-block;margin-top:10px;padding:18px 45px;border-radius:999px;background:linear-gradient(135deg,#D2A23C,#F8E19D);color:white;text-decoration:none;font-size:16px;font-weight:600;">
 
-        Come Claim Your Gift 💝
+        Come Collect Your Gift 💝
 
-      </h2>
-
-      <button onclick="window.open('https://wa.me/2348107062724?text=${encodeURIComponent(`Hi baby 🥰 I just won ${chosenPrize.amount}! Come give me my gift 💝`)}', '_blank')"
-        style="padding:18px 45px;border:none;border-radius:999px;background:linear-gradient(135deg,#D2A23C,#F8E19D);color:white;cursor:pointer;font-size:16px;">
-
-        Claim on WhatsApp 💬
-
-      </button>
+      </a>
 
     </div>
 
   `;
 
 };
-
 
 // --------------------------
 // Confetti
