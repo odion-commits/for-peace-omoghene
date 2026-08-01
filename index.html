@@ -936,43 +936,50 @@ clearInterval(timer);
 // Love Button
 // --------------------------
 
-loveButton.onclick=()=>{
+loveButton.onclick = () => {
 
-overlay.innerHTML=`
+  overlay.innerHTML = `
 
-<div class="gift-card">
+    <div class="gift-card">
 
-<h1 style="font-family:'Cormorant Garamond',serif;font-size:55px;margin-bottom:20px;">
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:55px;margin-bottom:20px;">
 
-Happy Girlfriend's Day ❤️
+        Happy Girlfriend's Day ❤️
 
-</h1>
+      </h1>
 
-<p style="font-size:20px;line-height:2;max-width:500px;margin:auto;">
+      <p style="font-size:20px;line-height:2;max-width:500px;margin:auto;">
 
-No prize could ever compare to having you in my life.
+        No prize could ever compare to having you in my life.
 
-Thank you for being my safe place,
+        Thank you for being my safe place,
 
-my biggest smile,
+        my biggest smile,
 
-and my favorite person.
+        and my favorite person.
 
-I love you more than words could ever explain.
+        I love you more than words could ever explain.
 
-</p>
+      </p>
 
-<br><br>
+      <br><br>
 
-<h2 style="color:#D2A23C;">
+      <h2 style="color:#D2A23C;margin-bottom:30px;">
 
-Come Claim Your Gift 💝
+        Come Claim Your Gift 💝
 
-</h2>
+      </h2>
 
-</div>
+      <button onclick="window.open('https://wa.me/2348107062724?text=${encodeURIComponent(`Hi baby 🥰 I just won ${chosenPrize.amount}! Come give me my gift 💝`)}', '_blank')"
+        style="padding:18px 45px;border:none;border-radius:999px;background:linear-gradient(135deg,#D2A23C,#F8E19D);color:white;cursor:pointer;font-size:16px;">
 
-`;
+        Claim on WhatsApp 💬
+
+      </button>
+
+    </div>
+
+  `;
 
 };
 
